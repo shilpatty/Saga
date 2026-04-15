@@ -31,7 +31,7 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .columns-row {
     grid-template-columns: 1fr;
     padding: 40px 20px;
