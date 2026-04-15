@@ -4,79 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="urn:adobe:aue:system:aemconnection" content="aem:https://author-p123152-e1209805.adobeaemcloud.com">
-  <title>Home | Saga</title>
+  <title>Home | Saga – Over 50s Insurance, Holidays & Money</title>
   <script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/saga.css">
 </head>
 <body>
-  <header></header>
-  <main>
-    <div class="section"
-      data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section"
-      data-aue-type="container"
-      data-aue-label="Section">
 
-      <div class="hero block"
-        data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/hero"
-        data-aue-type="component"
-        data-aue-label="Hero"
-        data-aue-model="hero">
-        <div><div>
-          <picture><img src="https://www.saga.co.uk/helix-contentlibrary/saga/homepage/hero.jpg" alt="Saga hero" data-aue-prop="image" data-aue-type="media"></picture>
-        </div></div>
-        <div><div>
-          <h1 data-aue-prop="heading" data-aue-type="richtext">Freedom to explore life over 50</h1>
-        </div></div>
-        <div><div>
-          <p data-aue-prop="text" data-aue-type="richtext">Insurance, holidays and cruises tailored for the over 50s. Trusted by millions since 1959.</p>
-        </div></div>
-        <div><div>
-          <p><a href="/car-insurance" data-aue-prop="cta" data-aue-type="text">Get a quote</a></p>
-        </div></div>
-      </div>
-
-      <div class="cards block"
-        data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/cards"
-        data-aue-type="container"
-        data-aue-label="Cards"
-        data-aue-model="cards">
-        <div data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/cards/item0"
-          data-aue-type="component" data-aue-label="Card">
-          <div>🏠</div>
-          <div><h3 data-aue-prop="heading" data-aue-type="richtext">Home Insurance</h3></div>
-          <div><p data-aue-prop="text" data-aue-type="richtext">Cover built for over 50s homeowners. Buildings, contents or both.</p></div>
-        </div>
-        <div data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/cards/item1"
-          data-aue-type="component" data-aue-label="Card">
-          <div>🚗</div>
-          <div><h3 data-aue-prop="heading" data-aue-type="richtext">Car Insurance</h3></div>
-          <div><p data-aue-prop="text" data-aue-type="richtext">Fixed price guaranteed for 3 years. No surprises at renewal.</p></div>
-        </div>
-        <div data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/cards/item2"
-          data-aue-type="component" data-aue-label="Card">
-          <div>✈️</div>
-          <div><h3 data-aue-prop="heading" data-aue-type="richtext">Travel Insurance</h3></div>
-          <div><p data-aue-prop="text" data-aue-type="richtext">Single trip or annual cover. Pre-existing conditions considered.</p></div>
-        </div>
-      </div>
-
-      <div class="columns block"
-        data-aue-resource="urn:aemconnection:/content/saga/language-masters/en/index/jcr:content/root/section/columns"
-        data-aue-type="component"
-        data-aue-label="Columns"
-        data-aue-model="columns">
-        <div>
-          <div>
-            <h2 data-aue-prop="heading" data-aue-type="richtext">Why choose Saga?</h2>
-            <p data-aue-prop="text" data-aue-type="richtext">Trusted by over 2.7 million customers. We've been providing specialist products for the over 50s since 1959, with award-winning service and fixed-price guarantees.</p>
-          </div>
-          <div>
-            <picture><img src="https://www.saga.co.uk/helix-contentlibrary/saga/homepage/why-saga.jpg" alt="Why Saga" data-aue-prop="image" data-aue-type="media"></picture>
-          </div>
-        </div>
-      </div>
-
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <svg width="80" height="28" viewBox="0 0 80 28" fill="none">
+          <text x="0" y="22" font-family="Playfair Display" font-size="24" font-weight="700" fill="#e4003b">Saga</text>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Insurance</a></li>
+        <li><a href="#">Holidays</a></li>
+        <li><a href="#">Cruises</a></li>
+        <li><a href="#">Money</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Get a quote</a>
     </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero"
+      data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/hero"
+      data-aue-type="component"
+      data-aue-label="Hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" alt="Scenic landscape">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Trusted since 1959</span>
+        <h1 data-aue-prop="heading" data-aue-type="richtext">
+          Freedom to explore<br>life over 50
+        </h1>
+        <p data-aue-prop="text" data-aue-type="richtext">
+          Insurance, holidays and cruises tailored for the over 50s.<br>Award-winning service. Fixed-price guarantee.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-aue-prop="cta" data-aue-type="text">Get a quote</a>
+          <a href="#" class="btn btn-ghost">Explore products</a>
+        </div>
+        <div class="hero-trust">
+          <span>⭐ Rated Excellent on Trustpilot</span>
+          <span>2.7M+ customers</span>
+          <span>Fixed prices for 3 years</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section class="cards-section"
+      data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards"
+      data-aue-type="container"
+      data-aue-label="Insurance Cards">
+      <div class="section-inner">
+        <h2 class="section-title">Our products</h2>
+        <div class="cards-grid">
+
+          <a href="#" class="card"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card0"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">🏠</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Home Insurance</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Cover built for over 50s homeowners. Buildings, contents or both — with a 3-year fixed price.</p>
+            <span class="card-link">Get a quote →</span>
+          </a>
+
+          <a href="#" class="card"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card1"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">🚗</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Car Insurance</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Fixed price guaranteed for 3 years. Specialist cover for experienced drivers over 50.</p>
+            <span class="card-link">Get a quote →</span>
+          </a>
+
+          <a href="#" class="card"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card2"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">✈️</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Travel Insurance</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Single trip or annual cover with pre-existing conditions considered as standard.</p>
+            <span class="card-link">Get a quote →</span>
+          </a>
+
+          <a href="#" class="card"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card3"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">🚐</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Motorhome Insurance</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Specialist agreed value cover for motorhome owners. European cover included as standard.</p>
+            <span class="card-link">Get a quote →</span>
+          </a>
+
+          <a href="#" class="card"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card4"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">❤️</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Health Insurance</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Private medical insurance tailored for the over 50s. Your choice of hospital and specialist.</p>
+            <span class="card-link">Get a quote →</span>
+          </a>
+
+          <a href="#" class="card card-highlight"
+            data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/cards/card5"
+            data-aue-type="component" data-aue-label="Card">
+            <div class="card-icon">🚢</div>
+            <h3 data-aue-prop="heading" data-aue-type="richtext">Cruises & Holidays</h3>
+            <p data-aue-prop="text" data-aue-type="richtext">Ocean and river cruises, escorted tours, and hotel stays — all designed for the over 50s.</p>
+            <span class="card-link">Explore holidays →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COLUMNS / WHY SAGA -->
+    <section class="why-section"
+      data-aue-resource="urn:aemconnection:/content/saga/en/index/jcr:content/root/columns"
+      data-aue-type="component"
+      data-aue-label="Why Saga">
+      <div class="section-inner why-inner">
+        <div class="why-text">
+          <span class="eyebrow">Why Saga?</span>
+          <h2 data-aue-prop="heading" data-aue-type="richtext">Over 65 years of<br>specialist expertise</h2>
+          <p data-aue-prop="text" data-aue-type="richtext">We've been providing specialist products and services for the over 50s since 1959. Trusted by more than 2.7 million customers, we understand what matters to you — and we're here when you need us.</p>
+          <ul class="why-list">
+            <li>✅ Fixed price guarantee — no renewal surprises</li>
+            <li>✅ Award-winning UK-based customer service</li>
+            <li>✅ Rated Excellent on Trustpilot</li>
+            <li>✅ Specialist products designed for over 50s</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Learn more about Saga</a>
+        </div>
+        <div class="why-image">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Happy couple" data-aue-prop="image" data-aue-type="media">
+          <div class="why-stat">
+            <strong>2.7M+</strong>
+            <span>Customers trust Saga</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BANNER -->
+    <section class="trust-banner">
+      <div class="section-inner trust-inner">
+        <div class="trust-item">
+          <strong>65+</strong>
+          <span>Years of experience</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>2.7M+</strong>
+          <span>Customers</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>⭐ Excellent</strong>
+          <span>Trustpilot rating</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>Fixed price</strong>
+          <span>3-year guarantee</span>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer></footer>
+
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-logo">Saga</div>
+      <p>© 2026 Saga Services Limited. Registered in England and Wales.</p>
+    </div>
+  </footer>
+
+  <script src="/scripts/saga.js"></script>
 </body>
 </html>
