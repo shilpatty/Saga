@@ -1,7 +1,7 @@
 export default function decorate(block) {
   const rows = [...block.children];
 
-  rows.forEach((row, i) => {
+  rows.forEach((row) => {
     const cells = [...row.children];
     const question = cells[0]?.textContent?.trim() || '';
     const answerContent = cells[1]?.innerHTML || '';

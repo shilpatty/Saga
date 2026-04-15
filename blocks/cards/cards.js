@@ -1,7 +1,7 @@
 export default function decorate(block) {
   const rows = [...block.children];
 
-  rows.forEach((row, i) => {
+  rows.forEach((row) => {
     row.className = 'card';
     const cells = [...row.children];
 
