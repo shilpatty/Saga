@@ -187,3 +187,18 @@ async function loadPage() {
 }
 
 loadPage();
+
+// Universal Editor connection
+function loadUniversalEditor() {
+  const meta = document.createElement('meta');
+  meta.name = 'urn:adobe:aue:system:aemconnection';
+  meta.content = 'aem:https://author-p123152-e1209805.adobeaemcloud.com';
+  document.head.appendChild(meta);
+
+  const script = document.createElement('script');
+  script.src = 'https://universal-editor-service.experiencecloud.live/corslib/LATEST';
+  script.defer = true;
+  document.head.appendChild(script);
+}
+
+loadUniversalEditor();

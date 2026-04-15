@@ -1,17 +1,44 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
-    });
-    ul.append(li);
+  // UE instrumentation on container
+  block.setAttribute('data-aue-resource', 'urn:aemconnection:/content/saga/cards/jcr:content');
+  block.setAttribute('data-aue-type', 'container');
+  block.setAttribute('data-aue-label', 'Cards');
+
+  const rows = [...block.children];
+
+  rows.forEach((row, i) => {
+    row.className = 'card';
+    row.setAttribute('data-aue-type', 'component');
+    row.setAttribute('data-aue-label', `Card ${i + 1}`);
+    row.setAttribute('data-aue-resource', `urn:aemconnection:/content/saga/cards/card-${i}`);
+
+    const cells = [...row.children];
+
+    // Cell 0: icon/image
+    if (cells[0]) {
+      cells[0].className = 'card-icon';
+    }
+
+    // Cell 1: heading
+    if (cells[1]) {
+      cells[1].className = 'card-heading';
+      const heading = cells[1].querySelector('h1,h2,h3,h4,p') || cells[1];
+      heading.setAttribute('data-aue-prop', 'heading');
+      heading.setAttribute('data-aue-type', 'richtext');
+    }
+
+    // Cell 2: description
+    if (cells[2]) {
+      cells[2].className = 'card-text';
+      const text = cells[2].querySelector('p') || cells[2];
+      text.setAttribute('data-aue-prop', 'text');
+      text.setAttribute('data-aue-type', 'richtext');
+    }
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.replaceChildren(ul);
+
+  // Wrap in a grid container
+  const grid = document.createElement('div');
+  grid.className = 'cards-grid';
+  grid.append(...block.children);
+  block.appendChild(grid);
 }
