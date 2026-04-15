@@ -15,19 +15,19 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-tag",
         "name": "cta",
         "label": "CTA Label",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "ctaLink",
         "label": "CTA Link",
         "valueType": "string"
       },
       {
-        "component": "reference",
+        "component": "aem-content",
         "name": "image",
         "label": "Background Image",
         "valueType": "string"
@@ -67,7 +67,7 @@
         "valueType": "string"
       },
       {
-        "component": "reference",
+        "component": "aem-content",
         "name": "image",
         "label": "Image",
         "valueType": "string"
@@ -103,17 +103,36 @@
     ]
   },
   {
-    "id": "section",
+    "id": "image",
     "fields": [
       {
-        "component": "select",
-        "name": "style",
-        "label": "Style",
-        "valueType": "string",
-        "options": [
-          { "name": "Default", "value": "" },
-          { "name": "Highlight", "value": "highlight" }
-        ]
+        "component": "aem-content",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "alt",
+        "label": "Alt Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Button Text",
+        "valueType": "string"
       }
     ]
   }
